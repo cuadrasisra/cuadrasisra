@@ -18,6 +18,13 @@
   height: 50px;
 
  }
+
+ .selec{
+
+  color: rgba(255, 255, 255, 0.75) !important;
+
+ }
+ 
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -8185,7 +8192,7 @@ textarea.form-control-lg {
 
 .bg-black {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgb(177 23 23) !important;
 }
 
 .bg-white {
@@ -8282,7 +8289,7 @@ textarea.form-control-lg {
 }
 
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 20% !important;
 }
 
 .rounded-pill {
@@ -10939,4 +10946,119 @@ header.masthead .bg-circle-4 {
   header.masthead .masthead-content .masthead-subheading {
     font-size: 4rem;
   }
+}
+
+footer {
+  padding: 20px 0;
+  text-align: left;
+  background-color: lightgray;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer-section {
+  margin: 10px;
+  box-sizing: border-box;
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+  margin: 15px 0; /* Aumenta la separación entre elementos de contacto */
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Alinea los enlaces de redes sociales en una sola línea */
+  gap: 10px; /* Espaciado entre los enlaces de redes sociales */
+}
+
+.social-links li {
+  margin: 0; /* Elimina márgenes adicionales */
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+}
+
+/* Estilos adicionales para separar Contacto y Síguenos */
+.social-media {
+  margin-top: 25px; /* Aumenta la separación entre Contacto y Síguenos */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      margin: 10px 0; /* Reduce la separación entre columnas */
+  }
+
+  .map-container iframe {
+      height: 250px;
+  }
+
+  /* Asegura que la separación entre todas las secciones sea consistente en pantallas pequeñas */
+  .footer-section + .footer-section {
+      margin-top: 25px; /* Mantiene la misma separación entre las secciones cuando se apilan */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+      width: 100%;
+      padding: 0 20px;
+  }
+
+  .footer-section h4 {
+      font-size: 18px;
+  }
+
+  .footer-section p,
+  .footer-section a {
+      font-size: 16px;
+  }
+
+  .map-container iframe {
+      height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex: 1 1 350px !important;
+  }
+}
+
+.white-footer{
+
+  color:#efe6e6;
+
+}
+
+.white2-footer{
+
+  color:#d8d0d0 !important;
+
 }
