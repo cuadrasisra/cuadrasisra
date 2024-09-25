@@ -11300,3 +11300,19 @@ footer {
   }
 
 }
+
+@media (min-width: 499px) {
+
+  #chico-finca{
+
+    font-size: 4rem;
+
+  }
+
+  #chico2-finca{
+
+    font-size: 1.7rem;
+
+  }
+
+}
