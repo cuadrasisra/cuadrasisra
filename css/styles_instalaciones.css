@@ -11070,7 +11070,212 @@ footer {
   font-style: normal;
 }
 
-#scroll{
 
-  background-color: #c3c3c14a;
+/* CSS */  
+.mi-seccion {padding: 40px;background-color: #f9f9f9;text-align: center;  
+}  
+  
+.contenido {display: flex;flex-direction: column;align-items: center;  
+}  
+  
+.imagen {margin: 20px;  
+}  
+  
+.imagen img {max-width: 100%;height: auto;border-radius: 8px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}  
+  
+.texto {max-width: 600px;margin: 20px;  
+}  
+  
+.texto h2 {font-size: 24px;color: #333;  
+}  
+  
+.texto p {font-size: 16px;color: #666;line-height: 1.5;  
+}  
+
+.subrayado-sombreado {
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  position: relative;
+  display: inline-block; /* Permite ajustar el ancho del subrayado */
+  line-height: 1.2; /* Ajusta el espacio entre líneas si el título es largo */
+  margin-bottom: 20px;
 }
+
+.subrayado-sombreado::after {
+  content: '';
+  display: block;
+  width: 60%; /* Ajusta el ancho del subrayado según tu preferencia */
+  height: 5px; /* Grosor del subrayado */
+  background: rgb(177, 23, 23); /* Color del subrayado */
+  position: absolute;
+  bottom: -10px; /* Ajusta este valor para separarlo más del texto */
+  left: 20%; /* Centra el subrayado */
+  box-shadow: 0px 4px 10px rgb(85 60 60); /* Sombra del subrayado */
+}
+.custom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Ambas columnas se mantienen del mismo tamaño */
+  gap: 50px; /* Espacio entre las columnas */
+  max-width: 1030px; /* Ancho máximo del contenedor */
+  margin: 40px auto; /* Margen superior e inferior */
+  padding: 0 20px; /* Padding lateral para mejor adaptación en pantallas pequeñas */
+  margin-top: 5rem;
+}
+
+.custom-columna {
+  flex: 1;
+  min-width: 300px; /* Ancho mínimo para que las columnas no se encojan demasiado */
+  display: flex;
+  flex-direction: column; /* Las columnas se comportan como contenedores flexibles */
+  justify-content: center; /* Centrar el contenido dentro de las columnas */
+}
+
+.custom-foto {
+  flex-basis: 50%; /* La foto ocupa el 50% del ancho */
+}
+
+.custom-foto img {
+  width: 100%;
+  height: 100%; /* Mantener la imagen al 100% de la altura de la columna */
+  object-fit: cover; /* Asegura que la imagen no se deforme */
+  border-radius: 10px; /* Esquinas redondeadas para la imagen */
+}
+
+.custom-texto {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-texto p {
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 20px; /* Espacio entre el texto y la imagen secundaria */
+  text-align: center;
+}
+
+
+.custom-imagen-secundaria {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+  max-height: 300px;
+  border-radius: 10px; /* Esquinas redondeadas para la segunda imagen */
+}
+
+/* Ajuste progresivo para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .custom-container {
+    max-width: 90%; /* Ancho máximo reducido para tablets */
+    gap: 30px; /* Menos espacio entre las columnas */
+  }
+
+  .custom-texto p {
+    font-size: 0.9rem; /* Texto un poco más pequeño en pantallas medianas */
+  }
+
+  .custom-texto h1 {
+    font-size: 1.5rem; /* Título ligeramente más pequeño en pantallas medianas */
+  }
+
+  .custom-imagen-secundaria {
+    max-height: 250px; /* Limitar la altura de la imagen secundaria en pantallas medianas */
+  }
+}
+
+/* Ajuste progresivo para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .custom-container {
+    flex-direction: column; /* Las columnas se apilan verticalmente */
+    gap: 20px;
+    padding: 0 15px; /* Menos padding lateral en móviles */
+  }
+
+  .custom-columna {
+    flex-basis: 100%; /* Cada columna ocupa el 100% del ancho en móviles */
+  }
+
+  .custom-texto p {
+    font-size: 0.85rem; /* Tamaño de texto más pequeño en pantallas pequeñas */
+  }
+
+  .custom-texto h1 {
+    font-size: 1.3rem; /* Título más pequeño en pantallas pequeñas */
+  }
+
+  .custom-imagen-secundaria {
+    max-height: 200px; /* Limitar la altura de la imagen secundaria en pantallas pequeñas */
+  }
+}
+
+/* Ajuste progresivo para pantallas extra pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .custom-container {
+    margin: 60px auto; /* Reduce el margen superior e inferior */
+    padding: 0 10px; /* Más padding lateral para pantallas extra pequeñas */
+  }
+
+  .custom-texto h1 {
+    font-size: 1.1rem; /* Título más pequeño */
+  }
+
+  .custom-texto p {
+    font-size: 0.75rem; /* Texto aún más pequeño en pantallas muy pequeñas */
+  }
+
+  
+
+  .custom-imagen-secundaria {
+    max-height: 180px; /* Reducir la altura de la imagen secundaria en pantallas muy pequeñas */
+  }
+}
+
+
+@media (max-width: 768px){
+
+  .ancho-ordenador{
+    display:none;
+  }
+
+}
+
+.imagenes-container {
+  display: flex;               /* Usamos flexbox */
+  justify-content: space-around; /* Espacio entre las imágenes */
+  align-items: center;          /* Centrar verticalmente */
+}
+
+.imagenes-container img {
+  width: 45%; /* Ajusta el tamaño de las imágenes al 45% del contenedor */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Aseguramos que en pantallas grandes las imágenes estén una al lado de la otra */
+@media (min-width: 768px) {
+  .imagenes-container img {
+    width: 30%; /* Ajusta según el tamaño deseado */
+  }
+
+  .custom-container{
+
+    
+    margin-bottom: 10rem;
+  
+    }
+}
+
+@media (min-width: 769px){
+
+  .ancho-movil{
+    display:none;
+  }
+
+
+}
+

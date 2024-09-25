@@ -11062,3 +11062,225 @@ footer {
   color:#d8d0d0 !important;
 
 }
+
+.subrayado-sombreado {
+  font-size: 2.5rem;
+  color: #000;
+  text-align: center;
+  position: relative;
+  display: inline-block; /* Permite ajustar el ancho del subrayado */
+  line-height: 1.2; /* Ajusta el espacio entre líneas si el título es largo */
+  margin-bottom: 20px;
+}
+
+.subrayado-sombreado::after {
+  content: '';
+  display: block;
+  width: 60%; /* Ajusta el ancho del subrayado según tu preferencia */
+  height: 5px; /* Grosor del subrayado */
+  background: rgb(177, 23, 23); /* Color del subrayado */
+  position: absolute;
+  bottom: -10px; /* Ajusta este valor para separarlo más del texto */
+  left: 20%; /* Centra el subrayado */
+  box-shadow: 0px 4px 10px rgb(85 60 60); /* Sombra del subrayado */
+}
+.custom-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px; /* Espacio entre las columnas */
+  max-width: 1030px; /* Ancho máximo del contenedor */
+  margin: 40px auto; /* Margen superior e inferior */
+  padding: 0 20px; /* Padding lateral para mejor adaptación en pantallas pequeñas */
+  margin-top:5rem;
+  margin-bottom:10rem;
+}
+
+.custom-columna {
+  flex: 1;
+}
+
+.custom-foto {
+  flex-basis: 50%; /* La foto ocupa el 50% del ancho */
+}
+
+.custom-foto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px; /* Esquinas redondeadas para la imagen */
+}
+
+.custom-texto {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.custom-texto p {
+  font-size: 1rem;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 20px; /* Espacio entre el texto y la imagen secundaria */
+}
+
+.custom-imagen-secundaria {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-top: 20px;
+  max-height: 300px;
+  border-radius: 10px; /* Esquinas redondeadas para la segunda imagen */
+}
+
+/* Responsive para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .custom-container {
+    max-width: 90%; /* Ancho máximo reducido para tablets */
+    gap: 30px; /* Menos espacio entre las columnas */
+  }
+
+  .custom-foto img {
+    max-height: 350px; /* Ajusta la altura máxima de la imagen principal */
+  }
+
+  .custom-texto p {
+    font-size: 0.95rem; /* Tamaño de texto un poco más pequeño */
+  }
+
+  .custom-imagen-secundaria {
+    max-height: 250px; /* Reduce la altura de la imagen secundaria */
+  }
+}
+
+/* Responsive para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .custom-container {
+    flex-direction: column; /* Las columnas se apilan verticalmente */
+    gap: 20px;
+    padding: 0 15px; /* Menos padding lateral en móviles */
+  }
+
+  .custom-foto,
+  .custom-texto {
+    flex-basis: 100%; /* Ocupan el 100% del ancho */
+  }
+
+  .custom-foto img {
+    max-height: 250px; /* Altura máxima para la imagen principal en móviles */
+  }
+
+  .custom-texto p {
+    font-size: 0.9rem; /* Tamaño de texto más pequeño */
+  }
+
+  .custom-imagen-secundaria {
+    max-height: 200px; /* Altura máxima para la imagen secundaria */
+  }
+}
+
+/* Responsive para pantallas extra pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+  .custom-container {
+    margin: 20px auto; /* Reduce el margen superior e inferior */
+    padding: 0 10px; /* Más padding lateral para pantallas extra pequeñas */
+  }
+
+  .custom-texto h1 {
+    font-size: 1.2rem; /* Título más pequeño */
+  }
+
+  .custom-texto p {
+    font-size: 0.85rem; /* Texto más pequeño */
+  }
+
+  .custom-imagen-secundaria {
+    max-height: 180px; /* Reduce la altura de la segunda imagen */
+  }
+}
+
+
+@media (min-width: 1024px) {
+
+.custom-corral{
+  
+  margin-top: 10rem;
+}
+
+}
+
+.video-prin{
+
+  width: 80%;
+  border-radius: 10px;
+    height: auto;
+}
+
+.video-prin2{
+
+  width: 80%;
+  border-radius: 10px;
+    height: auto;
+}
+
+.custom-container2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 5rem;
+  
+}
+
+/* Estilo para la sección de texto que ocupa todo el ancho */
+.full-width-text {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para las columnas debajo del texto */
+.custom-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  max-width: 1000px; /* Ajustar el ancho máximo para que no sea muy ancho */
+  gap: 20px; /* Espacio entre las dos columnas */
+}
+
+.column {
+  flex: 1; /* Hacer que ambas columnas ocupen el mismo espacio */
+}
+
+/* Estilo para el video */
+.custom-video {
+  width: 100%;
+  border-radius: 10px; /* Bordes redondeados para el video */
+}
+
+/* Estilos para las imágenes */
+.image-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre las imágenes */
+}
+
+.image-top, .image-bottom {
+  width: 100%;
+  border-radius: 10px; /* Bordes redondeados para las imágenes */
+}
+
+@media (max-width: 900px) {
+
+  .custom-columns{
+
+    width:100% !important;
+  }
+
+
+  .full-width-text {
+    width: 100% !important;
+  }
+}
