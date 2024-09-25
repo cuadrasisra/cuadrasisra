@@ -11284,3 +11284,19 @@ footer {
     width: 100% !important;
   }
 }
+
+@media (max-width: 500px) {
+
+  #chico-finca{
+
+    font-size: 3rem !important;
+
+  }
+
+  #chico2-finca{
+
+    font-size: 1.4rem !important;
+
+  }
+
+}
